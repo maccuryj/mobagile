@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout
+    android:id="@+id/dialog_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hours_data"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/spent_hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Spent Hours: "/>
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edit_hours"
+            android:layout_width="wrap_content"
+            android:maxEms="2"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/spent_hours"
+            android:paddingRight="10dp"
+            android:maxLines="1"
+            android:maxLength="2"
+            android:inputType="number"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ratio_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hours_data"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/i_new_ratio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Issue progress (%):  "/>
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edit_ratio"
+            android:layout_width="wrap_content"
+            android:maxEms="2"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/i_new_ratio"
+            android:paddingRight="10dp"
+            android:maxLength="3"
+            android:maxLines="1"
+            android:text=""
+            android:inputType="number"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ratio_data"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Comment:  "/>
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/comment_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:maxLines="7"
+            android:maxLength="160"
+            android:inputType="textMultiLine"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/e_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:paddingTop="20dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_above="@id/e_buttons">
+
+    </View>
+
+    <LinearLayout
+        android:id="@+id/e_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/e_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK" />
+
+        <Button
+            android:id="@+id/e_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel" />
+
+    </LinearLayout>
+
+</android.widget.RelativeLayout>
